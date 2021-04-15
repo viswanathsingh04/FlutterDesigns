@@ -1,3 +1,4 @@
+import 'package:designone/ui/four/optionpage.dart';
 import 'package:flutter/material.dart';
 
 class CreateUserPage extends StatefulWidget {
@@ -109,9 +110,7 @@ class _CreateUserPageState extends State<CreateUserPage> {
                   child: Text(
                     'Log in',
                     style: new TextStyle(
-                        //color: Colors.grey,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16.0),
+                        fontWeight: FontWeight.bold, fontSize: 16.0),
                     overflow: TextOverflow.fade,
                   ),
                 ),
@@ -121,10 +120,13 @@ class _CreateUserPageState extends State<CreateUserPage> {
                   backgroundColor: Colors.teal,
                   onSurface: Colors.grey,
                   shape: StadiumBorder(),
-                  //side: BorderSide(width: 6),
                 ),
                 onPressed: () {
-                  print('object');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => OptionPage(),
+                      ));
                 },
               ),
             ),

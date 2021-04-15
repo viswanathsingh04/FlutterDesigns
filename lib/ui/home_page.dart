@@ -1,3 +1,4 @@
+import 'package:designone/ui/five/designfive.dart';
 import 'package:designone/ui/four/design_four.dart';
 import 'package:designone/ui/one/design_one.dart';
 import 'package:designone/widgets/buttonwidgets.dart';
@@ -60,6 +61,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => DesignFour()),
+                );
+              },
+            ),
+            ButtonWidgets(
+              name: 'Rapido',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => DesignFive()),
                 );
               },
             ),

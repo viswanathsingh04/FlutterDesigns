@@ -1,6 +1,7 @@
 import 'package:designone/ui/five/designfive.dart';
 import 'package:designone/ui/four/design_four.dart';
 import 'package:designone/ui/one/design_one.dart';
+import 'package:designone/ui/pageviewpage/swipepage.dart';
 import 'package:designone/widgets/buttonwidgets.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +9,7 @@ import 'three/design_three.dart';
 import 'two/design_two.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key key, @required this.title}) : super(key: key);
 
   final String title;
 
@@ -52,6 +53,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (_) => DesignThree()),
+                );
+              },
+            ),
+            ButtonWidgets(
+              name: 'PageViewSlider',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => SwipePage()),
                 );
               },
             ),
